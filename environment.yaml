@@ -1,0 +1,5 @@
+name: quantum-computing
+channels:
+  - defaults
+dependencies:
+  - python>=3.12
