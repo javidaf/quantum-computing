@@ -6,10 +6,17 @@ authors = [
     {name = "javid rezai",email = "javid.af@outlook.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<4.0"
 dependencies = [
     "numpy (>=2.2.2,<3.0.0)",
-    "matplotlib (>=3.10.0,<4.0.0)"
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "qiskit (>=1.3.2,<2.0.0)",
+    "qiskit-aer (>=0.16.1,<0.17.0)",
+    "qiskit-ibm-provider (>=0.11.0,<0.12.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "qiskit-algorithms (>=0.3.1,<0.4.0)",
+    "seaborn (>=0.13.2,<0.14.0)"
 ]
 
 
