@@ -2,7 +2,7 @@ from typing import Optional, Tuple
 import matplotlib.pyplot as plt
 import numpy as np
 
-from qml.quantum_model import QuantumClassifier
+from quantum_computing.p2.qml.quantum_model import QuantumClassifier
 
 
 def plot_data(X, y, title="Data Visualization", xlabel="Feature 1", ylabel="Feature 2"):
@@ -14,7 +14,6 @@ def plot_data(X, y, title="Data Visualization", xlabel="Feature 1", ylabel="Feat
     plt.ylabel(ylabel)
     plt.colorbar(label="Class")
     plt.grid()
-    plt.show()
 
 
 def plot_probability_map(
@@ -89,7 +88,6 @@ def plot_probability_map(
     y_plot_range = np.linspace(feat2_min - padding2, feat2_max + padding2, num_points)
     X_grid, Y_grid = np.meshgrid(x_plot_range, y_plot_range)
 
-
     if X_data.shape[1] != _n_model_features:
         print(
             f"Warning: X_data has {X_data.shape[1]} features, but model expects {_n_model_features}. "
@@ -105,7 +103,7 @@ def plot_probability_map(
         base_sample_source = X_data[:, :_n_model_features]
         base_sample = np.mean(base_sample_source, axis=0)
 
-    else:  
+    else:
         base_sample = np.mean(X_data, axis=0)
 
     Z_grid = np.zeros((num_points, num_points))

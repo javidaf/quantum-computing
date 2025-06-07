@@ -248,7 +248,7 @@ class QuantumClassifier:
 
             # Validation metrics
             val_loss_epoch = None
-            val_accuracy_epoch = None
+            val_accuracy_epoch = 0
             if X_val is not None and y_val is not None:
                 y_val_pred = self.predict(X_val)
                 val_loss_epoch = self.cross_entropy_loss(y_val, y_val_pred)

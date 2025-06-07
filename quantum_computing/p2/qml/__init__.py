@@ -25,11 +25,8 @@ Example usage:
 """
 
 from .quantum_model import QuantumClassifier
-from .encoders import BaseEncoder, AngleEncoder
-from .ansatzes import (
-    BaseAnsatz,
-    SimpleAnsatz,
-)
+from .encoders import BaseEncoder, AngleEncoder, HadRotZRotZZEncoder
+from .ansatzes import BaseAnsatz, SimpleAnsatz, AdvancedAnsatz
 from .optimizers import AdamOptimizer
 from .initializers import RandomInitializer
 
@@ -39,9 +36,11 @@ __all__ = [
     # Encoders
     "BaseEncoder",
     "AngleEncoder",
+    "HadRotZRotZZEncoder",
     # Ansatzes
     "BaseAnsatz",
     "SimpleAnsatz",
+    "AdvancedAnsatz",
     # Optimizers
     "AdamOptimizer",
     # Initializers
